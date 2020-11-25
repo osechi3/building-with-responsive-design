@@ -149,7 +149,7 @@ li::before {
 
 .news-nav-bar__search-icon {
   color: #c2c2c2;
-  font-size: 15px;
+  font-size: 1.2rem;
 
   transform: scale(-1, 1);
 }
