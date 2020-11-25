@@ -39,6 +39,11 @@ module.exports = {
           'babel-loader?compact=false',
           'eslint-loader'
         ]
+      },
+
+      {
+        test: /\.(jpe?g|png|svg)$/,
+        use: 'url-loader'
       }
     ]
   },
@@ -46,14 +51,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ template: 'src/index.html' }),
 
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     {
-    //       from: 'src/assets/images',
-    //       to: path.resolve(__dirname, 'dist/assets/images')
-    //     }
-    //   ]
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'src/assets/images',
+          to: path.resolve(__dirname, 'dist/assets/images')
+        }
+      ]
+    }),
 
     new ImageminWebpPlugin({
       config: [{
