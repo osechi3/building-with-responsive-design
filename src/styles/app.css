@@ -60,7 +60,6 @@ li::before {
 
 .nav-bar__sub-list {
   position: absolute;
-  z-index: -1;
 
   padding: 0;
 
@@ -70,9 +69,14 @@ li::before {
   transition: transform .3s;
 }
 
+.nav-bar__sub-list_hidden {
+  transform: translateY(25px);
+  visibility: hidden;
+}
+
 .nav-bar__sub-list-triangle {
   position: absolute;
-  top: -5px;
+  top: -2px;
   left: 30px;
 
   width: 13px;
@@ -80,11 +84,6 @@ li::before {
 
   background-color: #000;
   transform: rotate(45deg);
-}
-
-.nav-bar__sub-list_hidden {
-  transform: translateY(25px);
-  visibility: hidden;
 }
 
 .nav-bar__sub-list-item {
