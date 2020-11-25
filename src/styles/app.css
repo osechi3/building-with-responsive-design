@@ -22,9 +22,7 @@ body {
 */
 
 /* Top Navigation Bar */
-.nav-bar {
-  background-color: #000;
-}
+.nav-bar { background-color: #000; }
 
 .nav-bar__list {
   display: flex;
@@ -36,9 +34,7 @@ body {
 }
 
 /* For accessibility reasons */
-li::before {
-  content: '\200B';
-}
+li::before { content: '\200B'; }
 
 .nav-bar__list-item {
   position: relative;
@@ -52,13 +48,9 @@ li::before {
   text-decoration: none;
 }
 
-.nav-bar__link:hover {
-  color: #fff;
-}
+.nav-bar__link:hover { color: #fff; }
 
-.nav-bar__about-item {
-  margin-left: auto;
-}
+.nav-bar__about-item { margin-left: auto; }
 
 .nav-bar__sub-list {
   position: absolute;
@@ -132,13 +124,9 @@ li::before {
   text-decoration: none;
 }
 
-.news-nav-bar__link:hover {
-  color: #000;
-}
+.news-nav-bar__link:hover { color: #000; }
 
-.news-nav-bar__last-list-item {
-  margin-left: auto;
-}
+.news-nav-bar__last-list-item { margin-left: auto; }
 
 .news-nav-bar__search-btn {
   width: 50px;
@@ -156,9 +144,7 @@ li::before {
   transform: scale(-1, 1);
 }
 
-.news-nav-bar__search-btn:hover {
-  cursor: pointer;
-}
+.news-nav-bar__search-btn:hover { cursor: pointer; }
 
 .news-nav-bar__search-btn:hover .news-nav-bar__search-icon {
   color: #666;
@@ -191,9 +177,7 @@ li::before {
   transition: opacity .3s ease;
 }
 
-.featured-article:hover {
-  opacity: .97;
-}
+.featured-article:hover { opacity: .97; }
 
 .featured-article__section-link {
   z-index: 1;
@@ -233,26 +217,18 @@ li::before {
   margin: 0 5px;
 }
 
-.featured-article__author {
-  font-style: normal;
-}
+.featured-article__author { font-style: normal; }
 
 .featured-article__author-link {
   color: #999;
   text-decoration: none;
 }
 
-.featured-article__author-link:hover {
-  color: #fff;
-}
+.featured-article__author-link:hover { color: #fff; }
 
-.featured-article__date-icon {
-  font-size: 1rem;
-}
+.featured-article__date-icon { font-size: 1rem; }
 
-.featured-article__shared-number {
-  margin: 0;
-}
+.featured-article__shared-number { margin: 0; }
 
 /* Main Article */
 .main-article {
@@ -283,9 +259,7 @@ li::before {
   color: #fff;
 }
 
-.main-article__title {
-  font-size: 4rem;
-}
+.main-article__title { font-size: 4rem; }
 
 .featured-article__cover-link {
   position: absolute;
