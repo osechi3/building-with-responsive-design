@@ -1,9 +1,105 @@
 html {
   box-sizing: border-box;
+
+  font-size: 14px;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+/*
+* Header
+*/
+
+/* Top Navigation Bar */
+.nav-bar {
+  background-color: #000;
+}
+
+.nav-bar__list {
+  display: flex;
+
+  margin: 0;
+  padding: 0 12px;
+
+  list-style: none;
+}
+
+/* For accessibility reasons */
+li::before {
+  content: '\200B';
+}
+
+.nav-bar__list-item {
+  position: relative;
+
+  padding: 5px 6px;
+}
+
+.nav-bar__link {
+  color: #999;
+  font-size: .95rem;
+  text-decoration: none;
+}
+
+.nav-bar__link:hover {
+  color: #fff;
+}
+
+.nav-bar__about-item {
+  margin-left: auto;
+}
+
+.nav-bar__sub-list {
+  position: absolute;
+  z-index: -1;
+
+  padding: 0;
+
+  list-style: none;
+  transform: translateY(0);
+
+  transition: transform .3s;
+}
+
+.nav-bar__sub-list-triangle {
+  position: absolute;
+  top: -5px;
+  left: 30px;
+
+  width: 13px;
+  height: 13px;
+
+  background-color: #000;
+  transform: rotate(45deg);
+}
+
+.nav-bar__sub-list_hidden {
+  transform: translateY(25px);
+  visibility: hidden;
+}
+
+.nav-bar__sub-list-item {
+  display: flex;
+  width: 220px;
+
+  background-color: #000;
+}
+
+.nav-bar__sub-link {
+  display: block;
+  flex-basis: 100%;
+  padding: 7px 0 7px 15px;
+}
+
+.nav-bar__sub-list-item1 {
+  border-bottom: 1px solid #1f1f1f;
 }
