@@ -15,6 +15,10 @@ class NavigationBar {
       list.addEventListener('mouseenter', this.displaySubMenu.bind(this))
       list.addEventListener('mouseleave', this.hideSubMenu.bind(this))
     })
+
+    window.addEventListener('resize', () => {
+      console.log(window.innerWidth)
+    })
   }
 
   displaySubMenu (event) {
