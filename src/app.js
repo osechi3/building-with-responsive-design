@@ -7,7 +7,9 @@ import '@fortawesome/fontawesome-free/js/fontawesome'
 
 class Page {
   constructor () {
-    this.mainPageLink = document.querySelector('.main-page-logo')
+    this.header = document.querySelector('.header')
+    this.mainPageLink = document.querySelector('.main-page-link')
+    this.mainPageLogo = document.querySelector('.main-page-logo')
 
     this.initListeners()
   }
@@ -22,9 +24,13 @@ class Page {
       if (scrollTimer) clearTimeout(scrollTimer)
       scrollTimer = setTimeout(() => {
         if (pageYOffset >= 30) {
-          this.mainPageLink.classList.add('main-page-logo_sticky')
+          this.header.classList.add('header_sticky')
+          this.mainPageLogo.classList.add('main-page-logo_sticky')
+          this.mainPageLink.classList.add('main-page-link_sticky')
         } else {
-          this.mainPageLink.classList.remove('main-page-logo_sticky')
+          this.header.classList.remove('header_sticky')
+          this.mainPageLogo.classList.remove('main-page-logo_sticky')
+          this.mainPageLink.classList.remove('main-page-link_sticky')
         }
         console.log(pageYOffset)
       }, 230)

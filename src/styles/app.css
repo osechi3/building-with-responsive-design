@@ -30,6 +30,8 @@ body {
   grid-template-columns: auto;
 }
 
+.header_sticky { grid-template-columns: auto 1fr; }
+
 .main-page-link {
   display: none;
   grid-row: span 2;
@@ -38,6 +40,8 @@ body {
 
   background-color: #000;
 }
+
+.main-page-link_sticky { display: flex; }
 
 .main-page-logo {
   width: 70px;
