@@ -54,6 +54,7 @@ li::before { content: '\200B'; }
 
 .nav-bar__sub-list {
   position: absolute;
+  z-index: 1;
 
   padding: 0;
 
@@ -165,10 +166,12 @@ li::before { content: '\200B'; }
 
 /* Featured Article */
 .featured-article {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 12px 20px;
+  padding: 20px 15px;
 
   background-position: center;
   background-size: cover;
@@ -177,7 +180,7 @@ li::before { content: '\200B'; }
   transition: opacity .3s ease;
 }
 
-.featured-article:hover { opacity: .97; }
+.featured-article:hover { opacity: .95; }
 
 .featured-article__section-link {
   z-index: 1;
@@ -195,6 +198,8 @@ li::before { content: '\200B'; }
 
   margin-top: 0;
   margin-bottom: 12px;
+
+  font-size: 2rem;
 
   line-height: 1;
 }
@@ -267,4 +272,17 @@ li::before { content: '\200B'; }
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+/* Featured Article 1 */
+.featured-article1 {
+  background-image:
+    linear-gradient(transparent, #000),
+    url("../assets/images/covid-article.jpg");
+}
+
+.featured-article2 {
+  background-image:
+    linear-gradient(transparent, #000),
+    url("../assets/images/youtube-article.png");
 }
