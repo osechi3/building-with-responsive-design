@@ -1,8 +1,36 @@
+/* eslint-disable no-new */
 import './styles/app.css'
 import 'normalize.css'
 import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/regular'
 import '@fortawesome/fontawesome-free/js/fontawesome'
+
+class Page {
+  constructor () {
+    this.mainPageLink = document.querySelector('.main-page-logo')
+
+    this.initListeners()
+  }
+
+  initListeners () {
+    window.addEventListener('resize', () => {
+      console.log(window.innerWidth)
+    })
+
+    let scrollTimer = ''
+    window.addEventListener('scroll', () => {
+      if (scrollTimer) clearTimeout(scrollTimer)
+      scrollTimer = setTimeout(() => {
+        if (pageYOffset >= 30) {
+          this.mainPageLink.classList.add('main-page-logo_sticky')
+        } else {
+          this.mainPageLink.classList.remove('main-page-logo_sticky')
+        }
+        console.log(pageYOffset)
+      }, 230)
+    })
+  }
+}
 
 class NavigationBar {
   constructor () {
@@ -15,10 +43,6 @@ class NavigationBar {
     this.nestedListItems.forEach(list => {
       list.addEventListener('mouseenter', this.displaySubMenu.bind(this))
       list.addEventListener('mouseleave', this.hideSubMenu.bind(this))
-    })
-
-    window.addEventListener('resize', () => {
-      console.log(window.innerWidth)
     })
   }
 
@@ -35,5 +59,5 @@ class NavigationBar {
   }
 }
 
-// eslint-disable-next-line no-new
+new Page()
 new NavigationBar()
