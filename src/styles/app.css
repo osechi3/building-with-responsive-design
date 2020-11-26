@@ -1,3 +1,19 @@
+/* Table of Contents */
+
+/*
+  * PAGE'S HEADER
+    ** Top Navigation Bar
+    ** Second Navigation Bar
+    ** Media Query 1000px
+    ** Media Query 780px
+  * FRONT PAGE NEWS SECTION
+    ** Featured Article
+    ** Main Article
+    ** Media Query 1000px
+    ** Media Query 780px
+  * LATEST NEWS SECTION
+*/
+
 html {
   box-sizing: border-box;
 
@@ -18,7 +34,7 @@ body {
 }
 
 /*
-* Header
+* Page's Header
 */
 
 .header {
@@ -191,6 +207,33 @@ li::before { content: '\200B'; }
   color: #f42;
 }
 
+@media (max-width: 1000px) {
+  .header { grid-template-columns: auto 1fr; }
+
+  .nav-bar__link { font-size: .92rem; }
+
+  .main-page-link { display: flex; }
+}
+
+@media (max-width: 780px) {
+  .header {
+    position: sticky;
+    top: 0;
+  }
+
+  .nav-bar { display: none; }
+
+  .main-page-logo_sticky { margin-top: 0; }
+
+  .news-nav-bar__list-item { display: none; }
+
+  .news-nav-bar__right-list-item { display: block; }
+
+  .news-nav-bar__last-list-item { display: block; }
+
+  .news-nav-bar__btn { padding: 14px 12px; }
+}
+
 /*
 * Front Page News Section
 */
@@ -314,7 +357,6 @@ li::before { content: '\200B'; }
 
 .main-article__title { font-size: 4rem; }
 
-/* Featured Article 1 */
 .featured-article1 {
   background-image:
     linear-gradient(transparent, #000),
@@ -328,14 +370,6 @@ li::before { content: '\200B'; }
 }
 
 @media (max-width: 1000px) {
-  /* Page's Header */
-  .header { grid-template-columns: auto 1fr; }
-
-  .nav-bar__link { font-size: .92rem; }
-
-  .main-page-link { display: flex; }
-
-  /* Front Page Articles */
   .front-page-news { height: 60vh; }
 
   .featured-article { padding: 15px 10px; }
@@ -360,25 +394,6 @@ li::before { content: '\200B'; }
 }
 
 @media (max-width: 780px) {
-  /* Page's Header */
-  .header {
-    position: sticky;
-    top: 0;
-  }
-
-  .nav-bar { display: none; }
-
-  .main-page-logo_sticky { margin-top: 0; }
-
-  .news-nav-bar__list-item { display: none; }
-
-  .news-nav-bar__right-list-item { display: block; }
-
-  .news-nav-bar__last-list-item { display: block; }
-
-  .news-nav-bar__btn { padding: 14px 12px; }
-
-  /* Front Page Articles */
   .front-page-news {
     grid-template-columns: 1fr;
     height: auto;
@@ -392,3 +407,7 @@ li::before { content: '\200B'; }
 
   .featured-article__section-link { font-weight: normal; }
 }
+
+/*
+* Latest News Section
+*/
