@@ -64,7 +64,7 @@ module.exports = {
       config: [{
         test: /\.(jpe?g|png)/,
         options: {
-          quality: 60
+          quality: 80
         }
       }]
     }),
@@ -76,7 +76,7 @@ module.exports = {
 
       plugins: [
         imageminMozjpeg({
-          quality: 75,
+          quality: 80,
           progressive: true
         })
       ]
