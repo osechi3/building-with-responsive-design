@@ -16,6 +16,7 @@
     ** Latest News
     ** Media Query 1000px
     ** Media Query 780px
+  * INVESTING SECTION
 */
 
 html {
@@ -39,6 +40,15 @@ a {
 address {
   font-style: normal;
 }
+
+ul {
+  padding-left: 0;
+
+  list-style: none;
+}
+
+/* For accessibility reasons */
+li::before { content: '\200B'; }
 
 *,
 *::before,
@@ -90,12 +100,7 @@ address {
 
   margin: 0;
   padding: 0 12px;
-
-  list-style: none;
 }
-
-/* For accessibility reasons */
-li::before { content: '\200B'; }
 
 .nav-bar__list-item {
   position: relative;
@@ -118,7 +123,6 @@ li::before { content: '\200B'; }
 
   padding: 0;
 
-  list-style: none;
   transform: translateY(0);
 
   transition: transform .3s;
@@ -166,7 +170,6 @@ li::before { content: '\200B'; }
   margin: 0;
   padding-left: 10px;
 
-  list-style: none;
   background-color: #fff;
 }
 
@@ -420,12 +423,14 @@ li::before { content: '\200B'; }
 
 /* General */
 .section {
-  margin: 60px 60px;
+  margin: 70px 60px;
 }
 
 .section__title {
   grid-column: 1 / -1;
   margin: 0;
+
+  line-height: 1;
 }
 
 .section__link {
@@ -443,7 +448,8 @@ li::before { content: '\200B'; }
 
 @media (max-width: 1200px) {
   .section {
-    margin: 40px 20px;
+    margin-right: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -555,4 +561,183 @@ li::before { content: '\200B'; }
   .latest-article__date {
     margin-left: 0;
   }
+}
+
+/*
+* Investing Section
+*/
+
+.investing {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.investing__header {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.investing__title { font-size: 2.2rem; }
+
+.investing__link-list {
+  display: flex;
+  margin: 0;
+  margin-top: 3px;
+}
+
+.investing__link-list-item {
+  display: flex;
+  align-items: center;
+
+  color: #f42;
+}
+
+.investing__link-list-item:nth-last-child(n+2)::after {
+  margin: 0 10px;
+
+  content: "|";
+}
+
+.investing__nav-link {
+  color: #f42;
+  font-size: 1.2rem;
+}
+
+.investing__nav-link:hover {
+  color: #000;
+}
+
+/* Company to invest in */
+.company {
+  padding: 10px;
+
+  background-image: linear-gradient(#f42 0 40px, #ffebe7 40px 38%, #fffaf8 38%);
+}
+
+.company__link {
+  display: grid;
+  grid-gap: 0 15px;
+  grid-template-columns: auto 1fr;
+}
+
+.company__picture { grid-row: span 2; }
+
+.company__img {
+  width: 60px;
+  height: 60px;
+}
+
+.company__name {
+  margin: 0;
+
+  color: #fff;
+}
+
+.company__money {
+  align-self: center;
+  margin: 0;
+
+  color: #000;
+  font-weight: bold;
+  font-size: 1.12rem;
+  line-height: 1.1;
+}
+
+.company__round {
+  grid-column: 2;
+  margin: 0;
+
+  color: #666;
+  font-size: .85rem;
+  text-transform: uppercase;
+}
+
+.company__info-list {
+  margin: 0;
+  margin-top: 25px;
+}
+
+.company__info-list::after {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 12px 0;
+
+  background-color: #ffcdc2;
+
+  content: '';
+}
+
+.company__info-item { margin: 7px 0; }
+
+.company__info-link {
+  color: #555;
+  font-size: .95rem;
+}
+
+.company__info-link:hover { color: #000; }
+
+.company__info-icon {
+  margin-right: 10px;
+
+  color: #000;
+  font-size: 1.1rem;
+}
+
+.company__description-link {
+  margin-bottom: 10px;
+
+  color: #555;
+  font-size: .85rem;
+}
+
+.company__quote { quotes: none; }
+
+.company__description-source {
+  display: inline-block;
+
+  color: #aaa;
+}
+
+@media (max-width: 1000px) {
+  .investing {
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .investing__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .investing__nav-bar { margin-top: 10px; }
+
+  .company { background-image: linear-gradient(#f42 0 40px, #ffebe7 40px 40%, #fffaf8 40%); }
+
+  .last-company { display: none; }
+
+  .company__name { font-size: 1.3rem; }
+
+  .company__money { font-size: 1.2rem; }
+
+  .company__round { font-size: .8rem; }
+}
+
+@media (max-width: 780px) {
+  .investing { grid-template-columns: 1fr; }
+
+  .investing__link-list { flex-direction: column; }
+
+  .investing__link-list-item { margin: 3px 0; }
+
+  .investing__link-list-item:nth-last-child(n+2)::after {
+    content: none;
+  }
+
+  .investing__nav-link { font-size: 1rem; }
+
+  .company { background-image: linear-gradient(#f42 0 40px, #ffebe7 40px 45%, #fffaf8 45%); }
 }
