@@ -20,6 +20,10 @@
     ** Companies
     ** Media Query 1000px
     ** Media Query 780px
+  * NEWS BY CATEGORY SECTION
+    **
+    ** Media Query 1000px
+    ** Media Query 780px
 */
 
 html {
@@ -743,4 +747,157 @@ li::before { content: '\200B'; }
   .investing__nav-link { font-size: 1rem; }
 
   .company { background-image: linear-gradient(#f42 0 40px, #ffebe7 40px 45%, #fffaf8 45%); }
+}
+
+/*
+* News By Category
+*/
+
+.news-by-category {
+  display: grid;
+  grid-gap: 50px 25px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.category__title {
+  margin-bottom: 15px;
+}
+
+.category__main-article {
+  height: 42vh;
+}
+
+.category__main-article:hover { opacity: 1; }
+
+.category__main-article-section-link {
+  font-size: .9rem;
+  text-transform: uppercase;
+}
+
+.category__main-article-title {
+  margin-top: 3px;
+  margin-bottom: 6px;
+
+  font-size: 1rem;
+}
+
+.category__main-article-title:hover {
+  text-decoration: underline #ccc;
+}
+
+.category__main-article-title-link {
+  font-size: 1.4rem;
+}
+
+.category__latest-article {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+
+.category__latest-article-links {
+  margin-top: 5px;
+}
+
+.category__latest-article-section-link {
+  color: #f42;
+  font-weight: normal;
+}
+
+.category__latest-article-title {
+  margin: 0;
+  margin-right: 15px;
+
+  font-size: .85rem;
+}
+
+.category__latest-article-title:hover {
+  text-decoration: underline #ccc;
+}
+
+.category__latest-article-link {
+  color: #f42;
+  font-size: 1rem;
+  line-height: 1.1;
+}
+
+.category__latest-article__img {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+}
+
+.category__main-article-author {
+  margin-left: 0;
+}
+
+.category__main-article1 {
+  background-image:
+    linear-gradient(transparent, #000),
+    url("../assets/images/zucker.jpeg");
+}
+
+.category__main-article2 {
+  background-image:
+    linear-gradient(transparent, #000),
+    url("../assets/images/spotify2020.png");
+}
+
+.category__main-article3 {
+  background-image:
+    linear-gradient(transparent, #000),
+    url("../assets/images/black-iphone.png");
+}
+
+.category__other-article-title {
+  margin: 0;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  font-weight: normal;
+  font-size: .92rem;
+
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.category__other-article-link {
+  display: flex;
+
+  color: #444;
+}
+
+.category__other-article-link:hover {
+  color: #000;
+}
+
+.category__other-article-link::before {
+  display: block;
+  margin-right: 8px;
+
+  color: #f32;
+
+  content: "•";
+}
+
+@media (max-width: 1000px) {
+  .news-by-category {
+    grid-gap: 50px 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .category__main-article {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 780px) {
+  .news-by-category {
+    /* grid-gap: 50px 20px; */
+    grid-template-columns: 1fr;
+  }
+
+  .category__main-article {
+    max-height: 82vh;
+  }
 }
