@@ -32,7 +32,6 @@ class Page {
           this.mainPageLogo.classList.remove('main-page-logo_sticky')
           this.mainPageLink.classList.remove('main-page-link_sticky')
         }
-        console.log(pageYOffset)
       }, 230)
     })
   }
