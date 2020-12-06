@@ -21,7 +21,10 @@
     ** Media Query 1000px
     ** Media Query 780px
   * NEWS BY CATEGORY SECTION
-    **
+    ** Main Article
+    ** Main Article -- Bg Images
+    ** Latest Article
+    ** Other Articles
     ** Media Query 1000px
     ** Media Query 780px
 */
@@ -763,6 +766,7 @@ li::before { content: '\200B'; }
   margin-bottom: 15px;
 }
 
+/* Main Article */
 .category__main-article {
   height: 42vh;
 }
@@ -789,6 +793,26 @@ li::before { content: '\200B'; }
   font-size: 1.4rem;
 }
 
+/* Main Articles -- BgImages */
+.category__main-article1 {
+  background-image:
+    linear-gradient(transparent, #000),
+    url("../assets/images/zucker.jpeg");
+}
+
+.category__main-article2 {
+  background-image:
+    linear-gradient(transparent, #000),
+    url("../assets/images/spotify2020.png");
+}
+
+.category__main-article3 {
+  background-image:
+    linear-gradient(transparent, #000),
+    url("../assets/images/black-iphone.png");
+}
+
+/* Latest Article */
 .category__latest-article {
   display: flex;
   justify-content: space-between;
@@ -832,24 +856,7 @@ li::before { content: '\200B'; }
   margin-left: 0;
 }
 
-.category__main-article1 {
-  background-image:
-    linear-gradient(transparent, #000),
-    url("../assets/images/zucker.jpeg");
-}
-
-.category__main-article2 {
-  background-image:
-    linear-gradient(transparent, #000),
-    url("../assets/images/spotify2020.png");
-}
-
-.category__main-article3 {
-  background-image:
-    linear-gradient(transparent, #000),
-    url("../assets/images/black-iphone.png");
-}
-
+/* Other Articles */
 .category__other-article-title {
   margin: 0;
   padding-top: 7px;
