@@ -20,7 +20,7 @@ module.exports = {
 
     /* name of the repo (if deploying to gh-pages) ('/repo-name/')
       or '/' (if deploying to firebase) */
-    publicPath: '/'
+    publicPath: '/building-with-responsive-design/'
   },
 
   devServer: {
@@ -46,6 +46,11 @@ module.exports = {
           'babel-loader',
           'eslint-loader'
         ]
+      },
+
+      {
+        test: /\.(jpe?g|png|svg)$/,
+        use: 'url-loader'
       }
     ]
   },
@@ -69,7 +74,7 @@ module.exports = {
       config: [{
         test: /\.(jpe?g|png)/,
         options: {
-          quality: 60
+          quality: 80
         }
       }]
     }),
@@ -81,7 +86,7 @@ module.exports = {
 
       plugins: [
         imageminMozjpeg({
-          quality: 75,
+          quality: 80,
           progressive: true
         })
       ]
